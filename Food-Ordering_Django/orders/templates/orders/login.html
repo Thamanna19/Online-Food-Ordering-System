@@ -1,0 +1,121 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Login</title>
+    <!-- Add any necessary CSS or meta tags here -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+
+</head>
+<body>
+
+<style>
+    body {
+        background-image: url('https://media.istockphoto.com/id/1457979959/photo/snack-junk-fast-food-on-table-in-restaurant-soup-sauce-ornament-grill-hamburger-french-fries.jpg?s=1024x1024&w=is&k=20&c=S3F3bV7Qv_mGWHGRjK2Xcx33qSODKaXbbhcZyrJBbBc='); /* Example image from Google */
+        background-size: cover;
+        background-position: center;
+        height: 100vh; /* Ensures full viewport height */
+        display: flex;
+        align-items: center;
+        justify-content: center; /* Center horizontally */
+    }
+
+    .container {
+        background-color: rgba(255, 255, 255, 0.7);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .login-form {
+        width: 100%;
+    }
+
+    .login-btn {
+        width: 100%;
+        background-color: green; /* Set button color */
+        color: white; /* Set text color */
+    }
+
+    .register-link {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .forgot-password-link {
+        text-align: center;
+        margin-top: 10px;
+    }
+</style>
+
+<div class="container">{% load static %}
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login</title>
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+        <style>
+            body {
+                background-image: url('https://media.istockphoto.com/id/1457979959/photo/snack-junk-fast-food-on-table-in-restaurant-soup-sauce-ornament-grill-hamburger-french-fries.jpg?s=1024x1024&w=is&k=20&c=S3F3bV7Qv_mGWHGRjK2Xcx33qSODKaXbbhcZyrJBbBc=');
+                background-size: cover;
+                background-position: center;
+                height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0;
+            }
+    
+            .container {
+                background-color: rgba(255, 255, 255, 0.8);
+                padding: 30px;
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            }
+    
+            .login-form {
+                width: 100%;
+            }
+    
+            .login-btn {
+                width: 100%;
+                background-color: green;
+                color: white;
+            }
+    
+            .register-link, .forgot-password-link {
+                text-align: center;
+                margin-top: 10px;
+            }
+    
+            @media (max-width: 768px) {
+                .container {
+                    width: 90%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8 col-lg-6">
+                    <form class="login-form" method="POST">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <button class="btn btn-success login-btn" type="submit">Login</button>
+                    </form>
+                    <p class="register-link">Don't have an account? <a href="/register"><strong>Register Here</strong></a>!</p>
+                    <p class="forgot-password-link"><a href="/forgot-password"><strong>Forgot Password?</strong></a></p>
+                </div>
+            </div>
+        </div>
+        <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    </body>
+    </html>
+    
+   
